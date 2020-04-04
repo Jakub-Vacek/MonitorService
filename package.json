@@ -1,0 +1,46 @@
+{
+  "name": "monitor-service",
+  "version": "1.0.0",
+  "description": "Test project for Applifting",
+  "main": "app.js",
+  "author": {
+    "name": "Jakub Vacek",
+    "email": "jakubvacek@icloud.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jakub-Vacek/MonitorService.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node build/app.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.3",
+    "@types/restify": "8.4.0",
+    "@types/restify-errors": "^4.3.3",
+    "jest": "^25.2.4",
+    "ts-jest": "^25.3.0",
+    "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.12.0-rc.0",
+    "inversify": "^5.0.1",
+    "inversify-restify-utils": "^3.4.0",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "restify": "8.4.0",
+    "restify-errors": "^8.0.2",
+    "typeorm": "^0.2.24",
+    "winston": "^3.2.1"
+  }
+}

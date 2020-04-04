@@ -1,0 +1,78 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+        "max-line-length": {
+            "options": [200]
+        },
+        "no-consecutive-blank-lines": false,
+        "promise-function-async": true,
+        "typedef": [
+            true,
+            "call-signature",
+            "arrow-call-signature",
+            "arrow-parameter",
+            "property-declaration",
+            "variable-declaration",
+            "parameter",
+            "member-variable-declaration",
+            "object-destructuring",
+            "array-destructuring"
+        ],
+        "ban-comma-operator": true,
+        "curly": true,
+        "no-this-assignment": true,
+        "use-default-type-parameter": true,
+        "import-spacing": true,
+        "no-irregular-whitespace": true,
+        "trailing-comma": [
+            true,
+            {
+                "multiline": "never",
+                "singleline": "never"
+            }
+        ],
+
+        "no-console": true,
+        "no-implicit-dependencies": true,
+        "no-any": true,
+        "await-promise": true,
+        "no-empty": true,
+        "no-floating-promises": true,
+        "triple-equals": true,
+        "interface-name": true,
+        "eofline": true,
+        "semicolon": true,
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "private-instance-field",
+                    "protected-instance-field",
+                    "public-instance-field",
+                    "private-static-field",
+                    "protected-static-field",
+                    "public-static-field",
+                    "private-constructor",
+                    "protected-constructor",
+                    "public-constructor",
+                    "private-instance-method",
+                    "protected-instance-method",
+                    "public-instance-method",
+                    "private-static-method",
+                    "protected-static-method",
+                    "public-static-method"
+                ]
+            }
+        ],
+        "no-return-await": true,
+        "no-shadowed-variable": true,
+        "no-sparse-arrays": true,
+        "unnecessary-else": true,
+        "no-string-literal": true,
+        "no-duplicate-imports": true,
+        "object-literal-sort-keys": false,
+        "ordered-imports": false,
+        "quotemark": [true, "single"],
+        "variable-name": [true, "allow-leading-underscore"]
+    }
+}

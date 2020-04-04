@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  database:
+    image: "mysql:5.7"
+    container_name: "mysql"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/init.sql
+    expose:
+      - 3306
+    environment:
+      MYSQL_HOST: database
+      MYSQL_PORT: 3306
+      MYSQL_USERNAME: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'applifting'
+
+  service:
+    build: .
+    image: "node"
+    container_name: "nodejs"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    links:
+      - database
+    environment:
+      MYSQL_HOST: database
+      MYSQL_USERNAME: 'root'
+      MYSQL_PORT: 3306
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'applifting'
+    restart: on-failure
+
+
