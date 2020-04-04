@@ -31,7 +31,7 @@ Simple test server for monitoring urls. Uses MySql, Restify, Jest, TypeORM, Inve
 
 * http://localhost:3000/monitored-endpoints - GET/POST - get/create monitored endpoint
 
-* http://localhost:3000/monitored-endpoints - PUT/DELETE - update/delete monitored endpoint
+* http://localhost:3000/monitored-endpoints/:id - PUT/DELETE - update/delete monitored endpoint
 
 * http://localhost:3000/monitored-endpoints/:id/monitoring-results/ - GET - get monitoring results from monitored endpoint with specified id
 
