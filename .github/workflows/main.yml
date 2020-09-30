@@ -1,12 +1,12 @@
 name: DX Scanner
 on: push
 jobs:
-  dx-scanne:
+  dx-scanner:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Runs DX Scanner on the code
-      - uses: docker://dxheroes/dx-scanner:latest
+        uses: docker://dxheroes/dx-scanner:latest
         with:
           github_token: ${{ secrets.TEST }}
       - run: dx-scanner run --ci
