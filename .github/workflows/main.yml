@@ -8,4 +8,4 @@ jobs:
       - name: Runs DX Scanner on the code
         uses: docker://dxheroes/dx-scanner:latest
         with:
-          github_token: "f05f7ed3818c6c6d31bfaae638f7fad2906acc31"
+          github_token: ${{ secrets.TEST }}
