@@ -5,8 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - run: cd
+      - run: ls
       - name: Runs DX Scanner on the code
-        uses: DXHeroes/dx-scanner@master
+        uses: docker://dxheroes/dx-scanner:latest
         with:
           github_token: ${{ secrets.TEST }}
       - run: cd
