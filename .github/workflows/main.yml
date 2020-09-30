@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Runs DX Scanner on the code
-        run: ls
+        run: dx-scanner run --ci
