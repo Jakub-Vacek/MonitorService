@@ -7,8 +7,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: Runs DX Scanner on the code
         uses: docker://dxheroes/dx-scanner:latest
-        with:
-          github_token: ${{ secrets.TEST }}
       - run: cd
       - run: ls
       - run: dx-scanner run --ci
